@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logooo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Java Developer</p>
+                <h1>Hi!<br>I'm <span>Thea</span></h1>
+            </div>
+        </div>
+   </div> 
+
+   <!-- -------about-------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/tow1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p>Hello! I'm Thea, a passionate Java developer with a knack for creating efficient and scalable applications. With a strong foundation in object-oriented programming and a keen eye for detail, I thrive on solving complex problems and delivering high-quality code. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects. Let's connect and build something amazing together!</p>
+            
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>App Development</span><br>Building Windows apps</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2027</span><br>Cavite State University - Carmona Campus</li>
+                        <li><span>2020 - 2023</span><br>New Life Christian School of Cavite</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>2024 - 2025</span><br>Collge Odyssey: CpE Edition</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------portfolio---------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/tow1.jpg">
+                <div class="layer">
+                    <h3>Collge Odyssey: CpE Edition</h3>
+                    <p>A desktop application that helps college students manage their academic journey effectively.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/tow1.jpg">
+                <div class="layer">
+                    <h3>Inventory Management System</h3>
+                    <p>A Java-based application designed to streamline inventory tracking and management for small businesses.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/tow1.jpg">
+                <div class="layer">
+                    <h3>Personal Finance Tracker</h3>
+                    <p>A user-friendly Java application that helps individuals monitor and manage their personal finances.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
