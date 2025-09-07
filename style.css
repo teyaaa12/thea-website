@@ -225,10 +225,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 /* -----contact---- */
-#contact{
-    padding: 50px 0;
-    /* color: #000000; */
-}
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -289,7 +286,7 @@ form btn2{
     padding: 25px 0;
     background: #2992d8;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 /* css for small screen */
 nav .fas{
